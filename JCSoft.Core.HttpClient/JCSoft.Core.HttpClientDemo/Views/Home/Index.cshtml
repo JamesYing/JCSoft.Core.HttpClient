@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model String
+
+<div class="row">
+    <h3>JCsoft Http Client Tests</h3>
+    <div class="col-md-5">
+        <form action="/Home/SendData"  method="post">
+            <div class="form-group">
+                <label for="urlinput">url</label>
+                <input type="text" name="url" class="form-control" id="urlinput" placeholder="Please Type Url">
+            </div>
+            <div class="form-group ">
+                <select class="form-control" name="method">
+                    <option>Get</option>
+                    <option>Post</option>
+                    <option>Put</option>
+                    <option>Delete</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="urlinput">data</label>
+                <textarea class="form-control" name="data" placeholder="Post or Put Data, please type a json data"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Send Data</button>
+        </form>
+    </div>
+    
+</div>
+
+<div class="row">
+    <h3>Result</h3>
+    <div class="text-center">
+        <span style="font-size: 20px;">@Model</span>
+    </div>
+</div>
